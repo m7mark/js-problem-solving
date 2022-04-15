@@ -28,9 +28,9 @@ function checkBrackets(str: string) {
   return stack.length === 0
 }
 
-console.log(checkBrackets('()'))
-console.log(checkBrackets('(){}[][{)}]'))
-console.log(checkBrackets('({})([{}])'))
-console.log(checkBrackets('call(next){}[]boolean'))
-console.log(checkBrackets('dffeef'))
-console.log(checkBrackets(''))
+console.log(checkBrackets('()')) //true
+console.log(checkBrackets('(){}[][{)}]')) //false
+console.log(checkBrackets('({})([{}])')) //true
+console.log(checkBrackets('call(next){}[]boolean')) //true
+console.log(checkBrackets('dffeef')) //false
+console.log(checkBrackets('')) //false
