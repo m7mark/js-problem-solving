@@ -2,15 +2,9 @@
 // расставления скобок
 
 function checkBrackets(str: string) {
-  if (!str || str.length === 0) return false //Empty string
-  if (str.match(/[\({\[]/) === null) return false //String without open brackets
-
-  function isCloseBrackets(char: string) {
-    return [')', '}', ']'].includes(char)
-  }
-  function isOpenBrackets(char: string) {
-    return ['(', '{', '['].includes(char)
-  }
+  if (!str.match(/[\({\[]/)) return false //String without open brackets
+  const isCloseBrackets = (char: string) => [')', '}', ']'].includes(char)
+  const isOpenBrackets = (char: string) => ['(', '{', '['].includes(char)
   const stack: [string?] = []
   const mapBrackets = {
     ')': '(',
