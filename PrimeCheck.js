@@ -1,3 +1,4 @@
+// Задача: вывести массив простых чисел от 0 до num
 
 const primeArray = (num) => [...Array(num + 1).keys()].filter(isPrime)
 
