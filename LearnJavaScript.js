@@ -147,3 +147,25 @@ map.forEach((val, key) => { console.log(key, val) });
 
 let set = new Set(arr)
 console.log(set, [...set.entries()]);
+
+//Деструктурирующее присваивание
+const options = {
+  height: '100px',
+}
+const { height = '200px', width: w = '300px' } = { options }
+console.log(height, w);
+const [num1, ...rest] = arr
+console.log(num1, rest);
+
+//Дата и время
+const date = new Date()
+console.log(date);
+console.log(date.getFullYear(), date.getTime());
+const parseDate = Date.parse('2020-10-20')
+console.log(new Date(parseDate))
+console.log(Date.now());
+
+//Формат JSON, метод toJSON
+const json = JSON.stringify(rangeIterable)
+console.log(json, typeof (json));
+console.log(JSON.parse(json));
