@@ -74,3 +74,16 @@ console.log(sum(9)(1)(1)()()(4)('dd').toString())
 //new Function
 const divide = new Function('a,b', 'return a/b')
 console.log(divide(4, 8));
+
+//Планирование: setTimeout и setInterval
+let sayHello = () => {
+  console.log('Hello there');
+}
+function sayHi() {
+  console.log('Hello blessed');
+}
+setTimeout(sayHi, 900);
+let intervalId = setInterval(sayHello, 1000)
+setTimeout(() => clearInterval(intervalId), 3000)
+
+//Декораторы и переадресация вызова, call/apply
