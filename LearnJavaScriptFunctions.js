@@ -87,3 +87,14 @@ let intervalId = setInterval(sayHello, 1000)
 setTimeout(() => clearInterval(intervalId), 3000)
 
 //Декораторы и переадресация вызова, call/apply
+function returnName(text1, text2) {
+  let response = `${text1} ${text2} ${this.name}`
+  return response
+}
+const john = { name: 'John' }
+const mary = { name: 'Mary' }
+const texting = ['Hi', 'dear']
+console.log(returnName.call(john, ...texting));
+console.log(returnName.apply(john, texting));
+let bindingFunc = returnName.bind(mary, 'Hello')
+console.log(bindingFunc('sister'));
