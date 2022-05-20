@@ -1,3 +1,6 @@
+// ---------------- FUNCTIONS
+// https://learn.javascript.ru/advanced-functions
+
 // Рекурсия и стек
 function pow(x, n) {
   return (n === 1) ? x : x * pow(x, n - 1)
