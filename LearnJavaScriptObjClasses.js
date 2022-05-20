@@ -35,3 +35,44 @@ console.log(Object.isSealed(clone));
 console.log(Object.isFrozen(clone));
 
 //Свойства - геттеры и сеттеры
+const obj = {
+  myage: 22,
+  name: 'Wow',
+  get age() {
+    return `${this.myage} years`
+  },
+  set age(val) {
+    this.myage = val
+  }
+}
+console.log(obj.age);
+obj.age = 12
+console.log(obj);
+console.log(Object.getOwnPropertyDescriptor(obj, 'age'));
+
+//Прототипы, наследование
+const base = { base: 'JS' }
+base.__proto__ = obj
+console.log(base, base.age);
+base.age = 10
+console.log(base);
+for (let key in base) {
+  let isOwn = base.hasOwnProperty(key)
+  if (isOwn) console.log(key)
+  else console.log(key);
+}
+
+function CreateBase(name) {
+  this.name = name
+}
+let newBase1 = new CreateBase('John')
+CreateBase.prototype = obj;
+let newBase2 = new CreateBase('John')
+console.log(newBase2.age);
+console.log(newBase1.constructor === CreateBase);
+console.log(newBase2.constructor === CreateBase);
+
+//Встроенные прототипы
+console.log(obj.__proto__ === Object.prototype);
+console.log(obj.__proto__.__proto__);
+console.log([].__proto__ === Array.prototype);
