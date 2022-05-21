@@ -76,3 +76,27 @@ console.log(newBase2.constructor === CreateBase);
 console.log(obj.__proto__ === Object.prototype);
 console.log(obj.__proto__.__proto__);
 console.log([].__proto__ === Array.prototype);
+
+//Методы прототипов
+let protobj = Object.create(obj)
+console.log(Object.getPrototypeOf(protobj));
+Object.setPrototypeOf(protobj, {})
+console.log(Object.getPrototypeOf(protobj));
+const cloneObj = Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj))
+console.log(cloneObj);
+console.log(Object.create(null));//простейший объект без методов
+
+//Класс
+class Person {
+  constructor(name = 'Dana') {
+    this.name = name
+  }
+  get myname() {
+    return this.setname()
+  }
+  setname() {
+    return `My name is ${this.name}`
+  }
+}
+const pers = new Person()
+console.log(pers.myname);
