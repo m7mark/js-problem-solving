@@ -88,15 +88,67 @@ console.log(Object.create(null));//простейший объект без ме
 
 //Класс
 class Person {
+  static publisher = 'Mark Ro'
   constructor(name = 'Dana') {
     this.name = name
   }
   get myname() {
-    return this.setname()
-  }
-  setname() {
     return `My name is ${this.name}`
+  }
+  set myname(val) {
+    this.name = val
   }
 }
 const pers = new Person()
+pers.myname = 'Billy'
 console.log(pers.myname);
+
+class Worker extends Person {
+  constructor(name, lang = 'JS') {
+    super(name)
+    this.lang = lang
+  }
+  static work() { return true }
+}
+const worker = new Worker()
+console.log(worker);
+console.log(worker.myname);
+console.log(Worker.work());
+console.log(Worker.publisher);
+
+console.log(Person.__proto__ === Function.prototype);
+console.log(Person.prototype.__proto__ === Object.prototype);
+
+class Private {
+  #car = 'BMW'
+  get car() {
+    return this.#car
+  }
+  set car(val) {
+    if (val.length < 1) throw new Error('Empty field')
+    this.#car = val
+  }
+}
+const private = new Private()
+console.log(private.car);
+private.car = 'Audi'
+console.log(private.car);
+
+console.log(private instanceof Private);
+console.log({}.toString.call(new Private));
+console.log({}.toString.call(new Error));
+console.log({}.toString.call(123));
+
+//Обработка ошибок, "try..catch"
+try {
+  novar
+  console.log('Show when code is right');
+} catch (err) {
+  console.log(err.stack);
+} finally {
+  console.log('Show always');
+}
+
+process.on("uncaughtException", (err) => {
+  console.log(err);
+})
