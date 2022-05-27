@@ -40,29 +40,13 @@ function promisify(f) {
 };
 
 const newPromCalc = promisify(calc)
-newPromCalc(1, 1).then(res => square(null, res)).catch(square)
+newPromCalc(1, 1).then(res => square(null, res)).catch(square);
 
-
-
-
-
-
-
-
-// function calcprom(a, b) {
-//   return new Promise((res, rej) => {
-//     res(a + b)
-//   })
-// }
-// calcprom(2, 3)
-//   .then(res => { return res ** 2 })
-//   .then(console.log)
-
-// function calcpromwithctx(a, b) {
-//   return new Promise(resolve => {
-//     calc(a, b, (s) => {
-//       resolve(console.log(s ** 2))
-//     })
-//   })
-// }
-// calcpromwithctx(2, 9)
+(async () => {
+  try {
+    const result = await newPromCalc(3, 5)
+    console.log(result);
+  } catch (e) {
+    console.log(e);
+  }
+})()
