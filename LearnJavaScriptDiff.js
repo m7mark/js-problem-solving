@@ -106,4 +106,10 @@ revokes.set(proxy, revoke)
 console.log(proxy.data);
 revoke = revokes.get(proxy)
 revoke()
-console.log(proxy.data);
+try { console.log(proxy.data); }
+catch (e) { console.log(e); }
+
+//Eval
+let x = 5;
+eval("x = 10");
+console.log(x);

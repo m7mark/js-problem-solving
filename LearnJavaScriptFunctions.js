@@ -101,3 +101,17 @@ console.log(returnName.call(john, ...texting));
 console.log(returnName.apply(john, texting));
 let bindingFunc = returnName.bind(mary, 'Hello')
 console.log(bindingFunc('sister'));
+
+//Каррирование
+function newSum(a, b) {
+  return a + b
+}
+function curry(f) {
+  return function (a) {
+    return function (b) {
+      return f(a, b)
+    }
+  }
+}
+let curSum = curry(newSum)
+console.log(curSum(3)(5));
