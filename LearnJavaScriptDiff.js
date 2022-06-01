@@ -113,3 +113,39 @@ catch (e) { console.log(e); }
 let x = 5;
 eval("x = 10");
 console.log(x);
+
+//Побитовые операторы
+console.log(14 & 9);
+console.log(14 | 9);
+console.log(14 ^ 9);
+console.log((14 ^ 9 ^ 9) === 14);
+console.log(~-1);
+console.log(3 << 1);
+console.log(3 >> 1);
+console.log(54.343 ^ 0);
+
+//BigInt
+const n = BigInt('222222222222222222222222222222222222222222222222')
+console.log(n - 2n);
+console.log(Number(n));
+
+//Intl: интернационализация в JavaScript
+let collator = new Intl.Collator()
+console.log('ёж' < 'як');
+console.log(collator.compare('ёж', 'як'));
+
+let formatter = new Intl.DateTimeFormat('ru', {
+  weekday: 'long',
+  year: 'numeric',
+  day: 'numeric',
+  month: 'long'
+})
+console.log(formatter.format(Date.now()))
+console.log(new Date('12 12 2022').toLocaleDateString('en'))
+
+let currency = new Intl.NumberFormat('ru', {
+  style: 'currency',
+  currency: 'rub',
+  minimumFractionDigits: 2
+})
+console.log(currency.format(123.443));
