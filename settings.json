@@ -1,0 +1,167 @@
+{
+  "editor.fontSize": 16,
+  "explorer.confirmDelete": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "workbench.iconTheme": "moxer-icons",
+  "git.confirmSync": false,
+  "AllAutocomplete.languageWhitespace": {
+    "ruby": "[^\\w\\-_\\$:\\u0080-\\uFFFF]+",
+    "javascript": "[^\\w_\\$\\u0080-\\uFFFF]+",
+    "javascriptreact": "[^\\w_\\-\\$\\@\\u0080-\\uFFFF]+",
+    "typescript": "[^\\w_\\-\\$\\@\\u0080-\\uFFFF]+",
+    "php": "[^\\w_\\$\\u0080-\\uFFFF]+",
+    "css": "[^\\w\\-_\\$\\u0080-\\uFFFF]+",
+    "scss": "[^\\w\\-_\\$\\@\\u0080-\\uFFFF]+",
+    "html": "[^\\w\\-_\\$\\u0080-\\uFFFF]+",
+    "python": "[^\\w\\-_\\u0080-\\uFFFF]+",
+    "elm": "[^\\w\\-_\\u0080-\\uFFFF]+",
+    "cpp": "[^\\w_\\u0080-\\uFFFF]+",
+    "csv": "[^\\w_\\u0080-\\uFFFF \\:]+"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "projectManager.git.baseFolders": [
+    "Projects",
+    "C:\\IT\\"
+  ],
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "workbench.startupEditor": "none",
+  "security.workspace.trust.untrustedFiles": "open",
+  "projectManager.openInNewWindowWhenClickingInStatusBar": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [ "<leader>", "d" ],
+      "after": [ "d", "d" ]
+    },
+    {
+      "before": [ "<Leader>", "p" ],
+      "commands": [ "workbench.action.quickOpen", ]
+    },
+    {
+      "before": [ "<Leader>", "s" ],
+      "commands": [ "editor.action.formatDocument", "workbench.action.files.save", ]
+    },
+    {
+      "before": [ "<Leader>", "h" ],
+      "after": [ "^", ]
+    },
+    {
+      "before": [ "<Leader>", "l" ],
+      "after": [ "$", ]
+    },
+    {
+      "before": [ "<Leader>", "q" ],
+      "after": [ "<C-w>", "q" ]
+    },
+    {
+      "before": [ "<Leader>", "," ],
+      "after": [ "<C-w>", "h" ]
+    },    
+    {
+      "before": [ "<Leader>", "w" ],
+      "after": [ "#", ]
+    },
+    {
+      "before": [ "<Leader>", "b" ],
+      "after": [ "%", ]
+    },
+    {
+      "before": [ "<Leader>", "u" ],
+      "after": [ "<C-r>", ]
+    },
+    {
+      "before": [ "<Leader>", "y" ],
+      "after": [ "y","i","w" ]
+    },
+    {
+      "before": [ "<Leader>", "v" ],
+      "after": [ "v","i","w" ]
+    },
+    {
+      "before": ["<Leader>", "n"],
+      "commands": [":noh"]
+    },
+    {
+      "before": ["<Leader>", "c"],
+      "after": [ "<C-c>", ]
+    },
+    {
+      "before": ["<Leader>", "d"],
+      "after": [ "d","$", ]
+    },
+    {
+      "before": ["<Leader>", "f"],
+      "after": [ "#", ]
+    },
+    {
+      "before": [ "<Leader>", "t" ],
+      "commands": [ "workbench.action.showCommands", ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "codesnap.containerPadding": "1em",
+  "[sql]": {
+    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+  },
+  "redhat.telemetry.enabled": false,
+  "workbench.preferredLightColorTheme": "GitHub Light Default",
+  "workbench.preferredDarkColorTheme": "Omni Dracula Theme Contrast",
+  "[css]": {
+    "editor.defaultFormatter": "MikeBovenlander.formate"
+  },
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorBlinking": "expand",
+  "editor.cursorStyle": "line-thin",
+  "editor.unicodeHighlight.allowedLocales": {
+    "ru": true
+  },
+  "vim.commandLineModeKeyBindings": [
+  
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Omni Dracula Theme Contrast",
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Fira Code, JetBrains Mono, Consolas, 'Courier New', monospace",
+  "window.zoomLevel": 1,
+  "color-highlight.markerType": "underline",
+  "jest.enableCodeLens": false,
+  "jest.showTerminalOnLaunch": false,
+}
